@@ -11,5 +11,7 @@ namespace webApi.Models
         public AdminDbContext(DbContextOptions<AdminDbContext> options) : base(options)
         { }
         public DbSet<AdminLogin> AdminLogins { get; set; }
+        public DbSet<unitMaster> unitMasters { get; set; }
+
     }
 }
