@@ -24,6 +24,8 @@ namespace webApi.Controllers
             return (admn);
         }
 
+       
+
         // GET api/values/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)
@@ -45,11 +47,13 @@ namespace webApi.Controllers
             var list = _context.AdminLogins.ToList().Where(s => s.UserName == obj.UserName & s.Password == obj.Password);
             if (list.Count() > 0)
                 return Ok("Login Successful");
-                
+
             return NotFound("Invalid Login details");
 
         }
 
+
+        
 
 
         // PUT api/values/5
