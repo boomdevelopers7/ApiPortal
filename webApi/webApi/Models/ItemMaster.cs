@@ -12,15 +12,12 @@ namespace webApi.Models
     {
         [Key]
         [Column("itemId")]
-        public int ID { get; set; }
-        [Column("itemName")]
-        public string Name { get; set; }
-        [Column("itemQuantity")]
-        public int Quantity { get; set; }
-        [Column("itemUnit")]
-        public string Unit { get; set; }
-        [Column("itemPrise")]
-        public int Prise { get; set; }
-
+        public int itemId { get; set; }
+        public string itemName { get; set; }
+        public int itemQuantity { get; set; }
+        [ForeignKey("unitMaster")]
+        public int unitId { get; set; }
+        public double itemPrice { get; set; }
     }
+
 }

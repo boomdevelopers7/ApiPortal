@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using webApi.Data;
 using webApi.Models;
 
 namespace webApi.Controllers
@@ -13,9 +14,9 @@ namespace webApi.Controllers
     [Route("api/unitMaster")]
     public class unitMasterController : Controller
     {
-        private readonly AdminDbContext _context;
+        private readonly MyDbContext _context;
 
-        public unitMasterController(AdminDbContext context)
+        public unitMasterController(MyDbContext context)
         {
             _context = context;
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using webApi.Data;
 using webApi.Models;
 
 namespace webApi.Controllers
@@ -10,9 +11,9 @@ namespace webApi.Controllers
     [Route("api/[controller]")]
     public class AdminController : Controller
     {
-        private readonly AdminDbContext _context;
+        private readonly MyDbContext _context;
 
-        public AdminController(AdminDbContext context)
+        public AdminController(MyDbContext context)
         {
             _context = context;
         }
