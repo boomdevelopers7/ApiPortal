@@ -15,8 +15,9 @@ namespace webApi.Models
         public int itemId { get; set; }
         public string itemName { get; set; }
         public int itemQuantity { get; set; }
-        [ForeignKey("unitMaster")]
         public int unitId { get; set; }
+        [ForeignKey("unitId")]
+        unitMaster unitMaster { get; set; }
         public double itemPrice { get; set; }
     }
 
