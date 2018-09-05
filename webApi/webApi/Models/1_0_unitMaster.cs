@@ -11,7 +11,7 @@ namespace webApi.Models
     public class unitMaster
     {[Key]
         [Column("unitId")]
-        public int unitId { get; set; }
+        public int Id { get; set; }
         public string unitName { get; set; }
         public string unitDescription { get; set; }
         public ICollection<ItemMaster> itemMasters { get; set; }
