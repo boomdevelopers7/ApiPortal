@@ -14,6 +14,6 @@ namespace webApi.Models
         public int unitId { get; set; }
         public string unitName { get; set; }
         public string unitDescription { get; set; }
-        public ICollection<ItemMaster> itemMasters { get; set; }
+        //public ICollection<ItemMaster> itemMasters { get; set; }
     }
 }
