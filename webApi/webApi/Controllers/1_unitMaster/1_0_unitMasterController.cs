@@ -41,6 +41,13 @@ namespace webApi.Controllers
         public IActionResult unitMaster([FromBody]unitMaster obj)
 
         {
+            if (obj.unitId != 0)
+            {
+                _context.unitMasters.Attach(obj);
+                _context.unitMasters.Update(obj);
+
+
+            }
             _context.unitMasters.Add(obj);
             _context.SaveChanges();
             return new ObjectResult("Unit Added Successfully");
