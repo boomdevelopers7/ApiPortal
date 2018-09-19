@@ -48,6 +48,7 @@ namespace webApi.Controllers
 
 
             }
+            else
             _context.unitMasters.Add(obj);
             _context.SaveChanges();
             return new ObjectResult("Unit Added Successfully");
