@@ -64,8 +64,16 @@ namespace webApi.Controllers
         
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+           var item = _context.unitMasters.SingleOrDefault(m => m.unitId == id);
+            if(item == null)
+            {
+                return NotFound();
+            }
+            _context.unitMasters.Remove(item);
+            _context.SaveChanges();
+            return Ok(item);
         }
     }
 }
