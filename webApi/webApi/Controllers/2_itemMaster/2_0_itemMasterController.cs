@@ -38,20 +38,42 @@ namespace webApi.Controllers
         
         // POST: api/itemMaster
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult itemMaster([FromBody]ItemMaster obj)
+
         {
+            if (obj.itemId != 0)
+            {
+                _context.ItemMasters.Attach(obj);
+                _context.ItemMasters.Update(obj);
+
+
+            }
+            else
+                _context.ItemMasters.Add(obj);
+            _context.SaveChanges();
+            return new ObjectResult("Unit Added Successfully");
+
         }
-        
+
+
         // PUT: api/itemMaster/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
         }
-        
+
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            var item = _context. ItemMasters.SingleOrDefault(m => m.itemId == id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            _context. ItemMasters.Remove(item);
+            _context.SaveChanges();
+            return Ok(item);
         }
     }
 }
