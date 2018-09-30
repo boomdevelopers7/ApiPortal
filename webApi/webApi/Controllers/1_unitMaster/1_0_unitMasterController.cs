@@ -9,7 +9,7 @@ using webApi.Models;
 
 namespace webApi.Controllers
 {
-   
+
     [Produces("application/json")]
     [Route("api/unitMaster")]
     public class unitMasterController : Controller
@@ -49,7 +49,7 @@ namespace webApi.Controllers
 
             }
             else
-            _context.unitMasters.Add(obj);
+                _context.unitMasters.Add(obj);
             _context.SaveChanges();
             return new ObjectResult("Unit Added Successfully");
 
@@ -61,11 +61,19 @@ namespace webApi.Controllers
         public void Put(int id, [FromBody]string value)
         {
         }
-        
+
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            var item = _context.unitMasters.SingleOrDefault(m => m.unitId == id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            _context.unitMasters.Remove(item);
+            _context.SaveChanges();
+            return Ok(item);
         }
     }
 }
