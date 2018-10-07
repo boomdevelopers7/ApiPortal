@@ -9,54 +9,49 @@ using webApi.Models;
 
 namespace webApi.Controllers
 {
-   
     [Produces("application/json")]
-    [Route("api/unitMaster")]
-    public class unitMasterController : Controller
+    [Route("api/areaMaster")]
+    public class areaMasterController : Controller
     {
+
         private readonly MyDbContext _context;
 
-        public unitMasterController(MyDbContext context)
+        public areaMasterController(MyDbContext context)
         {
             _context = context;
         }
-
-        // GET: api/unitMaster
+        // GET: api/areaMaster
         [HttpGet]
-        public List<unitMaster> Get()
+        public List<areaMaster> Get()
         {
-            var admn = _context.unitMasters.ToList();
-            return (admn);
+            var area = _context.areaMasters.ToList();
+            return (area);
         }
 
-        // GET: api/unitMaster/5
-        [HttpGet("{id}", Name = "Get")]
+        // GET: api/areaMaster/5
+        [HttpGet("{id}", Name = "areaGet")]
         public string Get(int id)
         {
             return "value";
         }
-
-        // POST: api/unitMaster
+        
+        // POST: api/areaMaster
         [HttpPost]
-        public IActionResult unitMaster([FromBody]unitMaster obj)
+        public IActionResult areaMaster([FromBody]areaMaster obj)
 
         {
-            if (obj.unitId != 0)
+            if (obj.areaId != 0)
             {
-                _context.unitMasters.Attach(obj);
-                _context.unitMasters.Update(obj);
-
-
+                _context.areaMasters.Attach(obj);
+                _context.areaMasters.Update(obj);
             }
             else
-            _context.unitMasters.Add(obj);
+            _context.areaMasters.Add(obj);
             _context.SaveChanges();
-            return new ObjectResult("Unit Added Successfully");
-
+            return new ObjectResult("Type Added Successfully");
         }
 
-
-        // PUT: api/unitMaster/5
+        // PUT: api/areaMaster/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
@@ -66,14 +61,14 @@ namespace webApi.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-           var item = _context.unitMasters.SingleOrDefault(m => m.unitId == id);
-            if(item == null)
+            var area = _context.areaMasters.SingleOrDefault(m => m.areaId == id);
+            if (area == null)
             {
                 return NotFound();
             }
-            _context.unitMasters.Remove(item);
+            _context.areaMasters.Remove(area);
             _context.SaveChanges();
-            return Ok(item);
-        }
+            return Ok(area);
+        } 
     }
 }

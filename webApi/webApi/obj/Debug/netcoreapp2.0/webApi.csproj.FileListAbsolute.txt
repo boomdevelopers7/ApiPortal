@@ -20,3 +20,14 @@ E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.AssemblyInfoInputs.cac
 E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.AssemblyInfo.cs
 E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.dll
 E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.pdb
+G:\myProject\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.deps.json
+G:\myProject\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.runtimeconfig.json
+G:\myProject\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.runtimeconfig.dev.json
+G:\myProject\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.dll
+G:\myProject\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.pdb
+G:\myProject\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.csprojAssemblyReference.cache
+G:\myProject\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.csproj.CoreCompileInputs.cache
+G:\myProject\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.AssemblyInfoInputs.cache
+G:\myProject\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.AssemblyInfo.cs
+G:\myProject\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.dll
+G:\myProject\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.pdb
