@@ -9,17 +9,6 @@ C:\Users\Radhe Krishna\Documents\GitHub\ApiPortal\webApi\webApi\obj\Debug\netcor
 C:\Users\Radhe Krishna\Documents\GitHub\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.AssemblyInfo.cs
 C:\Users\Radhe Krishna\Documents\GitHub\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.dll
 C:\Users\Radhe Krishna\Documents\GitHub\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.pdb
-E:\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.deps.json
-E:\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.runtimeconfig.json
-E:\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.runtimeconfig.dev.json
-E:\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.dll
-E:\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.pdb
-E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.csprojAssemblyReference.cache
-E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.csproj.CoreCompileInputs.cache
-E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.AssemblyInfoInputs.cache
-E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.AssemblyInfo.cs
-E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.dll
-E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.pdb
 G:\myProject\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.deps.json
 G:\myProject\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.runtimeconfig.json
 G:\myProject\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.runtimeconfig.dev.json
@@ -31,3 +20,13 @@ G:\myProject\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.AssemblyInfo
 G:\myProject\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.AssemblyInfo.cs
 G:\myProject\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.dll
 G:\myProject\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.pdb
+E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.csproj.CoreCompileInputs.cache
+E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.AssemblyInfoInputs.cache
+E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.AssemblyInfo.cs
+E:\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.deps.json
+E:\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.runtimeconfig.json
+E:\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.runtimeconfig.dev.json
+E:\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.dll
+E:\ApiPortal\webApi\webApi\bin\Debug\netcoreapp2.0\webApi.pdb
+E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.dll
+E:\ApiPortal\webApi\webApi\obj\Debug\netcoreapp2.0\webApi.pdb

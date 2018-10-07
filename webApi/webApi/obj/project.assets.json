@@ -7038,7 +7038,7 @@
       ]
     },
     "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
-      "sha512": "UMlN++q5qqzQ2HH+uOrKxN5fmBXMQDhrYkSaPJxhmyzfJaFPirrVr1raim/Ocq1psAZoB9+7JSAf0GDAX35wUg==",
+      "sha512": "H6ZsQzxYw/6k2DfEQRXdC+vQ6obd6Uba3uGJrnJ2vG4PRXjQZ7seB13JdCfE72abp8E6Fk3gGgDzfJiLZi5ZpQ==",
       "type": "package",
       "path": "microsoft.extensions.platformabstractions/1.1.0",
       "files": [
@@ -13250,23 +13250,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Chetan Jeughale\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Ram\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\myProject\\ApiPortal\\webApi\\webApi\\webApi.csproj",
+      "projectUniqueName": "E:\\ApiPortal\\webApi\\webApi\\webApi.csproj",
       "projectName": "webApi",
-      "projectPath": "G:\\myProject\\ApiPortal\\webApi\\webApi\\webApi.csproj",
-      "packagesPath": "C:\\Users\\Chetan Jeughale\\.nuget\\packages\\",
-      "outputPath": "G:\\myProject\\ApiPortal\\webApi\\webApi\\obj\\",
+      "projectPath": "E:\\ApiPortal\\webApi\\webApi\\webApi.csproj",
+      "packagesPath": "C:\\Users\\Ram\\.nuget\\packages\\",
+      "outputPath": "E:\\ApiPortal\\webApi\\webApi\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Chetan Jeughale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ram\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
