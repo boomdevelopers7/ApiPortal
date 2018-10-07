@@ -23,7 +23,7 @@ namespace webApi.Controllers
         [HttpGet]
         public List<ItemMaster> Get()
         {
-            var item = _context.ItemMasters.Include(s=>s.unitMaster).ToList();
+            var item = _context.ItemMasters.Include(s=>s.unitMaster).Include(s=>s.typeMaster).ToList();
             return (item);
         }
 
