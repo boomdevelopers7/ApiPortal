@@ -15,6 +15,7 @@ namespace webApi.Data
         public DbSet<AdminLogin> AdminLogins { get; set; }
         public DbSet<ItemMaster> ItemMasters { get; set; }
         public DbSet<unitMaster> unitMasters { get; set; }
+        public DbSet<cityMaster> cityMaster { get; set; }
 
     }
 }

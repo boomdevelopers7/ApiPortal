@@ -46,7 +46,6 @@ namespace webApi.Controllers
                 _context.unitMasters.Attach(obj);
                 _context.unitMasters.Update(obj);
 
-
             }
             else
                 _context.unitMasters.Add(obj);
