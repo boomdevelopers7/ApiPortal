@@ -59,12 +59,11 @@ namespace webApi.Controllers._6_CityMaster
         
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete([FromBody] cityMaster obj)
         {
-            var det=_context.cityMaster.Where(s=>s.cityId==id).ElementAtOrDefault(0);
-            det.isActive = false;
-            _context.cityMaster.Attach(det);
-            _context.cityMaster.Update(det);
+            obj.isActive = false;
+            _context.cityMaster.Attach(obj);
+            _context.cityMaster.Update(obj);
             _context.SaveChanges();
 
         }
