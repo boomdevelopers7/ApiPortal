@@ -40,6 +40,7 @@ namespace webApi.Controllers._6_CityMaster
         [HttpPost]
         public IActionResult cityMaster([FromBody] cityMaster obj)
         {
+            obj.isActive = true;
             if (obj.cityId != 0)
             {
                 _context.cityMaster.Attach(obj);

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using webApi.Data;
 using webApi.Models;
 
@@ -24,7 +25,7 @@ namespace webApi.Controllers
         [HttpGet]
         public List<areaMaster> Get()
         {
-            var area = _context.areaMasters.ToList();
+            var area = _context.areaMasters.Include(s => s.cityMaster).ToList();
             return (area);
         }
 

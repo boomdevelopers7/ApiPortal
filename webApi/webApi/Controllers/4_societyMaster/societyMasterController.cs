@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using webApi.Data;
 using webApi.Models;
 
@@ -23,7 +24,7 @@ namespace webApi.Controllers
         [HttpGet]
         public List<societyMaster> Get()
         {
-            var society = _context.societyMasters.ToList();
+            var society = _context.societyMasters.Include(s => s.areaMaster).ToList();
             return (society);
         }
 

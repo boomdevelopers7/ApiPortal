@@ -13,5 +13,9 @@ namespace webApi.Models
         [Key]
         public int areaId { get; set; }
         public string areaName { get; set; }
+        [ForeignKey("cityId")]
+        public int cityId { get; set; }
+        public cityMaster cityMaster { get; set; }
+
     }
 }
