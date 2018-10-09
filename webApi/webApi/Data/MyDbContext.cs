@@ -18,10 +18,7 @@ namespace webApi.Data
         public DbSet<typeMaster> typeMasters { get; set; }
         public DbSet<areaMaster> areaMasters { get; set; }
         public DbSet<societyMaster> societyMasters { get; set; }
-<<<<<<< HEAD
         public DbSet<cityMaster> cityMaster { get; set; }
-=======
->>>>>>> f83e8abafc5fee7f48d1582ac6286c93e52bc9ba
 
     }
 }
