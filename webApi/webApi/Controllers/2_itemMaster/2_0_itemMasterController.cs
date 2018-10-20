@@ -23,7 +23,7 @@ namespace webApi.Controllers
         [HttpGet]
         public List<ItemMaster> Get()
         {
-            var item = _context.ItemMasters.Include(s=>s.unitMaster).Include(s=>s.typeMaster).ToList();
+            var item = _context.ItemMasters.Include(s=>s.unitMaster).Include(s=>s.typeMaster).Where(s => s.isActive == true).ToList();
             return (item);
         }
 
@@ -41,6 +41,7 @@ namespace webApi.Controllers
         public IActionResult itemMaster([FromBody]ItemMaster obj)
 
         {
+            obj.isActive = true;
             if (obj.itemId != 0)
             {
                 _context.ItemMasters.Attach(obj);
@@ -71,7 +72,8 @@ namespace webApi.Controllers
             {
                 return NotFound();
             }
-            _context. ItemMasters.Remove(item);
+            item.isActive = false;
+            _context. ItemMasters.Update(item);
             _context.SaveChanges();
             return Ok(item);
         }

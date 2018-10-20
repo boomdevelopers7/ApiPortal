@@ -22,6 +22,8 @@ namespace webApi.Models
         [ForeignKey("typeId")]
         public int typeId { get; set; }
         public  typeMaster typeMaster   { get; set; }
+        public bool isActive { get; set; }
+
     }
 
 

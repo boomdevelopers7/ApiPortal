@@ -17,5 +17,7 @@ namespace webApi.Models
         [ForeignKey("societyId")]
         public int societyId { get; set; }
         public societyMaster societyMaster { get; set; }
+        public bool isActive { get; set; }
+
     }
 }

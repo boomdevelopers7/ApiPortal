@@ -16,6 +16,7 @@ namespace webApi.Models
         [ForeignKey("areaId")]
         public int areaId { get; set; }
         public areaMaster areaMaster { get; set; }
+        public bool isActive { get; set; }
 
     }
 }

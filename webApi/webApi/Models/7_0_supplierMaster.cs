@@ -17,5 +17,7 @@ namespace webApi.Models
         public string supMobNo { get; set; }
         public string supMobNo2 { get; set; }
         public string supPincode { get; set; }
+        public bool isActive { get; set; }
+
     }
 }

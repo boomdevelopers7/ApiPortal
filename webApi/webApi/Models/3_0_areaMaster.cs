@@ -9,13 +9,14 @@ namespace webApi.Models
 {   
     [Table("areaMaster")]
     public class areaMaster
-    {
+    { 
         [Key]
         public int areaId { get; set; }
         public string areaName { get; set; }
         [ForeignKey("cityId")]
         public int cityId { get; set; }
         public cityMaster cityMaster { get; set; }
+        public bool isActive { get; set; }
 
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using webApi.Data;
 using webApi.Models;
 
@@ -25,7 +26,7 @@ namespace webApi.Controllers._6_CityMaster
         [HttpGet]
         public List<cityMaster> Get()
         {
-            var listCity = _context.cityMaster.Where(s=>s.isActive==true).ToList();
+            var listCity = _context.cityMaster.Where(s => s.isActive == true).ToList();
             return (listCity);
         }
 
@@ -35,8 +36,8 @@ namespace webApi.Controllers._6_CityMaster
         {
             return "value";
         }
-        
-        
+
+
         [HttpPost]
         public IActionResult cityMaster([FromBody] cityMaster obj)
         {
@@ -59,16 +60,20 @@ namespace webApi.Controllers._6_CityMaster
         public void Put(int id, [FromBody]string value)
         {
         }
-        
+
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete([FromBody] cityMaster obj)
+        public IActionResult Delete(int id)
         {
-            obj.isActive = false;
-            _context.cityMaster.Attach(obj);
-            _context.cityMaster.Update(obj);
+            var item = _context.cityMaster.SingleOrDefault(m => m.cityId == id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            item.isActive = false;
+            _context.cityMaster.Update(item);
             _context.SaveChanges();
-
+            return Ok(item);
         }
     }
 }

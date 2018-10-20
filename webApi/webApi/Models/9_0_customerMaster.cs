@@ -25,5 +25,7 @@ namespace webApi.Models
         public string custMobNo1 { get; set; }
         public string custMobNo2 { get; set; }
         public string custGeoLocation { get; set; }
+        public bool isActive { get; set; }
+
     }
 }

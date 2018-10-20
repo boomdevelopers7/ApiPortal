@@ -24,7 +24,7 @@ namespace webApi.Controllers
         [HttpGet]
         public List<societyMaster> Get()
         {
-            var society = _context.societyMasters.Include(s => s.areaMaster).ToList();
+            var society = _context.societyMasters.Include(s => s.areaMaster).Where(s => s.isActive == true).ToList();
             return (society);
         }
 
@@ -40,6 +40,7 @@ namespace webApi.Controllers
         public IActionResult societyMaster([FromBody]societyMaster obj)
 
         {
+            obj.isActive = true;
             if (obj.societyId != 0)
             {
                 _context.societyMasters.Attach(obj);
@@ -59,19 +60,20 @@ namespace webApi.Controllers
         public void Put(int id, [FromBody]string value)
         {
         }
-        
+
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var society = _context.societyMasters.SingleOrDefault(m => m.societyId == id);
-            if (society == null)
+            var item = _context.societyMasters.SingleOrDefault(m => m.societyId == id);
+            if (item == null)
             {
                 return NotFound();
             }
-            _context.societyMasters.Remove(society);
+            item.isActive = false;
+            _context.societyMasters.Update(item);
             _context.SaveChanges();
-            return Ok(society);
+            return Ok(item);
         }
     }
 }

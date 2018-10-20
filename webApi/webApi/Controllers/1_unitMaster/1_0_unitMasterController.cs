@@ -25,7 +25,7 @@ namespace webApi.Controllers
         [HttpGet]
         public List<unitMaster> Get()
         {
-            var admn = _context.unitMasters.ToList();
+            var admn = _context.unitMasters.Where(s => s.isActive == true).ToList();
             return (admn);
         }
 
@@ -41,6 +41,7 @@ namespace webApi.Controllers
         public IActionResult unitMaster([FromBody]unitMaster obj)
 
         {
+            obj.isActive = true;
             if (obj.unitId != 0)
             {
                 _context.unitMasters.Attach(obj);
@@ -71,7 +72,8 @@ namespace webApi.Controllers
             {
                 return NotFound();
             }
-            _context.unitMasters.Remove(item);
+            item.isActive = false;
+            _context.unitMasters.Update(item);
             _context.SaveChanges();
             return Ok(item);
         }

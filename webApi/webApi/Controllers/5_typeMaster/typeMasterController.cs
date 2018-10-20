@@ -24,7 +24,7 @@ namespace webApi.Controllers
         [HttpGet]
         public List<typeMaster> Get()
         {
-            var type = _context.typeMasters.ToList();
+            var type = _context.typeMasters.Where(s => s.isActive == true).ToList();
             return (type);
         }
 
@@ -41,6 +41,7 @@ namespace webApi.Controllers
         public IActionResult  typeMaster([FromBody]typeMaster obj)
 
         {
+            obj.isActive = true;
             if (obj.typeId != 0)
             {
                 _context. typeMasters.Attach(obj);
@@ -61,20 +62,20 @@ namespace webApi.Controllers
         public void Put(int id, [FromBody]string value)
         {
         }
-        
+
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var item = _context. typeMasters.SingleOrDefault(m => m.typeId == id);
+            var item = _context.typeMasters.SingleOrDefault(m => m.typeId == id);
             if (item == null)
             {
                 return NotFound();
             }
-            _context. typeMasters.Remove(item);
+            item.isActive = false;
+            _context.typeMasters.Update(item);
             _context.SaveChanges();
             return Ok(item);
         }
-
     }
 }

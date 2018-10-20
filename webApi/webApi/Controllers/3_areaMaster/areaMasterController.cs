@@ -25,8 +25,8 @@ namespace webApi.Controllers
         [HttpGet]
         public List<areaMaster> Get()
         {
-            var area = _context.areaMasters.Include(s => s.cityMaster).ToList();
-            return (area);
+            var obj = _context.areaMasters.Include(s => s.cityMaster).Where(s => s.isActive == true).ToList();
+            return (obj);
         }
 
         // GET: api/areaMaster/5
@@ -41,6 +41,7 @@ namespace webApi.Controllers
         public IActionResult areaMaster([FromBody]areaMaster obj)
 
         {
+            obj.isActive = true;
             if (obj.areaId != 0)
             {
                 _context.areaMasters.Attach(obj);
@@ -57,19 +58,20 @@ namespace webApi.Controllers
         public void Put(int id, [FromBody]string value)
         {
         }
-        
+
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var area = _context.areaMasters.SingleOrDefault(m => m.areaId == id);
-            if (area == null)
+            var item = _context.areaMasters.SingleOrDefault(m => m.areaId == id);
+            if (item == null)
             {
                 return NotFound();
             }
-            _context.areaMasters.Remove(area);
+            item.isActive = false;
+            _context.areaMasters.Update(item);
             _context.SaveChanges();
-            return Ok(area);
-        } 
+            return Ok(item);
+        }
     }
 }
